@@ -29,7 +29,6 @@ TARGET_ARCH := arm
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_ABI := armeabi-v7a
 TARGET_CPU_ABI2 := armeabi
-TARGET_CPU_SMP := true
 TARGET_CPU_VARIANT := krait
 TARGET_USE_QCOM_BIONIC_OPTIMIZATION := true
 
@@ -113,6 +112,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # Radio
 BOARD_RIL_CLASS := ../../../device/lge/g3-common/ril/
+TARGET_RELEASE_CPPFLAGS += -DNEEDS_LGE_RIL_SYMBOLS
 
 # SELinux
 include device/qcom/sepolicy/sepolicy.mk
